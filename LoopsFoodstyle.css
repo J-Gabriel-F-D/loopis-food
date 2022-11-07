@@ -1,0 +1,38 @@
+
+/* Paleta de cores
+.color1 { #f2e3c6 };
+.color2 { #ffc6a5 };
+.color3 { #e6324b };
+.color4 { #2b2b2b };
+.color5 { #353634 }; */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    text-align: center;
+    margin: auto;
+    margin-top: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+}
+
+#cadastro{
+    margin: auto;
+    background: red;
+    width: 21em;
+    height: 27em;
+    border-radius: 10px;
+    margin-bottom: 7.5px;
+}
+#cardapio{
+    margin: auto;
+    background: green;
+    width: 21em;
+    height: 27em;
+    border-radius: 10px;
+    margin-bottom: 7.5px;
+}

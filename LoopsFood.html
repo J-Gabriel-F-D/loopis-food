@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Food</title>
+    <script src="LoopsFoodscript.js" defer></script>
+    <link rel="stylesheet" href="LoopsFoodstyle.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Este codigo corresponde ao desafio da Loops, com o objetivo de criar um site/cardapio virtual que consite no cadastro de novos pratos, com ou sem promoção, com uma opção para remover o prato não desejado e , os pratos salvos, serão exibidos em um campo imediatamente ao lado do cadastro -->
+        <div class="vazia"></div>
+        <div id="cadastro">
+            <h2>Cadastro</h2>  
+            <div>
+                <!-- Pegando o nome do prato. Estou utilizando o id = "disheName" para recuperar o valor posteriormente -->
+                <p>Nome do prato</p>
+                <input type="text" id="disheName" placeholder="Produto...">
+            </div>
+            <div>
+                <!-- Pegando o preço do prato. Estou utilizando o id = "dishePrice" para recuperar o valor posteriormente -->
+                <p>Preço</p>
+                <input type="number" id="dishePrice" placeholder="Preço...">
+            </div>
+            <div>
+                <!-- Input para verificar se o prato terá desconto ou não. Uso o name = "promo" para que possa selecionar apenas uma das opções, e uso os id's = "sim" e "nao" para diferenciá-los entre se -->
+                <p>Promoção</p>
+                <input type="radio" name="promo" id="sim"><p>Sim</p>
+                <input type="radio" name="promo" id="nao"><p>Não</p>
+            </div>
+            <div>
+                <!-- Botão do para que as informações anteriores sejam salvas -->
+                <button type="submit" id="buttonSave">Salvar</button>
+            </div>
+        </div>
+            <div class="vazia"></div>
+        <div id="cardapio">
+            <h2>Produtos</h2>
+            <!-- Local onde será criado a lista de pratos à salvar -->
+            <div id="produtos">
+
+            </div>
+        </div>
+        <div class="vazia"></div>
+
+    </div>    
+</body>
+</html>
