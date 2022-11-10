@@ -21,7 +21,7 @@
 }
 
 #cadastro{
-    margin: auto;
+    //margin: auto;
     background: red;
     width: 21em;
     height: 27em;
@@ -29,10 +29,10 @@
     margin-bottom: 7.5px;
 }
 #cardapio{
-    margin: auto;
+    // margin: auto;
     background: green;
     width: 21em;
-    height: 27em;
+    min-height: 27em;
     border-radius: 10px;
     margin-bottom: 7.5px;
 }
