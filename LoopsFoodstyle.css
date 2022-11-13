@@ -1,17 +1,14 @@
-
-/* Paleta de cores
-.color1 { #f2e3c6 };
-.color2 { #ffc6a5 };
-.color3 { #e6324b };
-.color4 { #2b2b2b };
-.color5 { #353634 }; */
 *{
     margin: 0;
     padding: 0;
 }
-
+body{
+    filter: blur();
+    background-image: url(https://preview.pixlr.com/images/800wm/100/1/1001152062.jpg) ;
+    color: #904c08;
+    font-family:Arial, Helvetica, sans-serif;
+}
 #container{
-    text-align: center;
     margin: auto;
     margin-top: 8em;
     display: flex;
@@ -19,20 +16,110 @@
     justify-content: center;
     width: 60%;
 }
-
+h2{
+    font-size: 1.5em;
+    margin: 20px;
+    text-align: center;
+}
+.alinhar{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: auto;
+    width: 70%;
+}
 #cadastro{
-    //margin: auto;
-    background: red;
+    display: grid;
+    background: #f8c28c;
     width: 21em;
     height: 27em;
-    border-radius: 10px;
+    max-height: 27em;
+    border-radius: 15px;
     margin-bottom: 7.5px;
 }
+input::placeholder{
+    color: #9c5309;
+}
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.inputConfig,input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+#disheName, #dishePrice{
+    height: 20px;
+    width: 90%;
+    background: #f3a150a4;
+    border: #7d4207 3px solid;
+    border-radius: 17px;
+    text-align:center;
+}
 #cardapio{
-    // margin: auto;
-    background: green;
+    margin: auto;
+    background: #f8c28c;
     width: 21em;
     min-height: 27em;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 7.5px;
+}
+#botaoSalvar{
+    text-align: center;
+}
+#buttonSave{
+    cursor: pointer;
+    color: #f09234;
+    width: 70%;
+    height: 35px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    background-color: #7d4207;
+}
+#buttonSave:hover{
+    color: #7d4207;
+    background-color: #f09234;
+    border: #7d4207 3px solid;
+}
+
+.semPromocao, .comPromocao{
+    text-align: center;
+    margin-top: 8.7px;
+    min-height: 50px;
+    min-width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: red;
+}
+.fonte{
+    flex-direction: column;
+    color: #7d4207;
+}
+.btn{
+    height: 20px;
+}
+.imagem{
+    width: 50px;
+    height: 50px;
+}
+
+.promo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px; 
+}
+#sim, #nao{
+    margin-right: 7px;   
+}
+input[type="radio"]{
+    -webkit-appearance: none;
+    background-color: #904c08;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+input[type="radio"]:checked{
+    background-color: #f07f0e;
 }
