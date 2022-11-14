@@ -13,29 +13,30 @@ function salvar(){
     let precoPrato = document.createElement('p');
     let botaoRemover = document.createElement('button');
     let imagem = document.createElement('img');
-    imagem.classList.add('imagem');
-    imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2391/2391713.png');
     botaoRemover.classList.add('btn');
-    nomePrato.classList.add('fonte');
-    precoPrato.classList.add('fonte');
+    nomePrato.classList.add('nome');
+    precoPrato.classList.add('preco');
     novaDiv.prepend(imagem);
     novaDiv.appendChild(nomePrato);
     novaDiv.appendChild(precoPrato);
     novaDiv.appendChild(botaoRemover);
+    imagem.classList.add('imagem');
     if(document.getElementById('sim').checked){
+        imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2733/2733082.png');
         novaDiv.classList.add('comPromocao');
         nomePrato.textContent = disheName.value;
-        precoPrato.textContent = desconto(dishePrice.value);
-        botaoRemover.textContent = "Remover";
+        precoPrato.textContent = `R$${desconto(dishePrice.value)}`;
+        botaoRemover.textContent = "X";
         produtos.appendChild(novaDiv);
         objPrato.nome = disheName.value;
         objPrato.preco = desconto(dishePrice.value);
         objPrato.promo = 1;
     }else{
+        imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2391/2391713.png');
         novaDiv.classList.add('semPromocao');
         nomePrato.textContent = disheName.value;
-        precoPrato.textContent = dishePrice.value;
-        botaoRemover.textContent = "Remover";
+        precoPrato.textContent = `R$${dishePrice.value}`;
+        botaoRemover.textContent = "X";
         produtos.prepend(novaDiv);
         objPrato.nome = disheName.value;
         objPrato.preco = dishePrice.value;
@@ -58,25 +59,27 @@ function refresh (array){
         let botaoRemover = document.createElement('button');
         let imagem = document.createElement('img');
         imagem.classList.add('imagem');
-        imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2391/2391713.png');
-        botaoRemover.classList.add('btn');
-        nomePrato.classList.add('fonte');
-        precoPrato.classList.add('fonte');
+        nomePrato.classList.add('nome');
+        precoPrato.classList.add('preco');    
         novaDiv.appendChild(nomePrato);
         novaDiv.appendChild(precoPrato);
         novaDiv.appendChild(botaoRemover); 
         novaDiv.prepend(imagem);
         if(prato.promo === 1){
+            botaoRemover.classList.add('btnPromo');
+            imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2733/2733082.png');
             novaDiv.classList.add('comPromocao');
             nomePrato.textContent = prato.nome;
-            precoPrato.textContent = prato.preco;
-            botaoRemover.textContent = "Remover";
+            precoPrato.textContent = `R$${prato.preco}`;
+            botaoRemover.textContent = "X";
             produtos.appendChild(novaDiv);
         }else{
+            botaoRemover.classList.add('btn');
+            imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2391/2391713.png');
             novaDiv.classList.add('semPromocao');
             nomePrato.textContent = prato.nome;
-            precoPrato.textContent = prato.preco;
-            botaoRemover.textContent = "Remover";
+            precoPrato.textContent = `R$${prato.preco}`;
+            botaoRemover.textContent = "X";
             produtos.prepend(novaDiv);
         }
         botaoRemover.addEventListener("click",function(){
