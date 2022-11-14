@@ -13,7 +13,6 @@ function salvar(){
     let precoPrato = document.createElement('p');
     let botaoRemover = document.createElement('button');
     let imagem = document.createElement('img');
-    botaoRemover.classList.add('btn');
     nomePrato.classList.add('nome');
     precoPrato.classList.add('preco');
     novaDiv.prepend(imagem);
@@ -22,6 +21,7 @@ function salvar(){
     novaDiv.appendChild(botaoRemover);
     imagem.classList.add('imagem');
     if(document.getElementById('sim').checked){
+        botaoRemover.classList.add('btnPromo');
         imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2733/2733082.png');
         novaDiv.classList.add('comPromocao');
         nomePrato.textContent = disheName.value;
@@ -32,6 +32,7 @@ function salvar(){
         objPrato.preco = desconto(dishePrice.value);
         objPrato.promo = 1;
     }else{
+        botaoRemover.classList.add('btn');
         imagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/2391/2391713.png');
         novaDiv.classList.add('semPromocao');
         nomePrato.textContent = disheName.value;
