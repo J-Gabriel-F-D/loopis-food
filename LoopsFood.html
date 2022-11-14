@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="LoopsFoodstyle.css">
 </head>
 <body>
+    <div id="titulo">
+        <img id="cafe" src="https://cdn-icons-png.flaticon.com/512/1079/1079082.png">
+        <h1 class="titulo1">Loops </h1>
+        <h1 class="titulo2">Café's</h1>
+    </div>
     <div id="container">
         <!-- Este codigo corresponde ao desafio da Loops, com o objetivo de criar um site/cardapio virtual que consite no cadastro de novos pratos, com ou sem promoção, com uma opção para remover o prato não desejado e , os pratos salvos, serão exibidos em um campo imediatamente ao lado do cadastro -->
         <div id="cadastro">
             <h2>Cadastro</h2>  
-            <div class="alinhar" class="fonte">
+            <div class="alinhar">
                 <!-- Pegando o nome do prato. Estou utilizando o id = "disheName" para recuperar o valor posteriormente -->
-                <p>Nome do prato</p>
+                <p class="titulos">Nome do prato</p>
                 <input type="text" id="disheName" placeholder="Produto...">
             </div>
             
             <div class="alinhar">
                 <!-- Pegando o preço do prato. Estou utilizando o id = "dishePrice" para recuperar o valor posteriormente -->
-                <p>Preço</p>
+                <p class="titulos">Preço</p>
                 <input type="number" id="dishePrice" placeholder="Preço...">
             </div>
             <div class="alinhar" >
-                <p>Promoção</p>
+                <p class="titulos">Promoção</p>
                 <!-- Input para verificar se o prato terá desconto ou não. Uso o name = "promo" para que possa selecionar apenas uma das opções, e uso os id's = "sim" e "nao" para diferenciá-los entre se -->
                 <div class="promo">
                     <input type="radio" name="promocao" id="sim"><p>Sim</p>
