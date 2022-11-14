@@ -8,9 +8,29 @@ body{
     color: #904c08;
     font-family:Arial, Helvetica, sans-serif;
 }
+#cafe{
+    width: auto;
+    height: 20px;
+}
+
+#titulo{
+    margin: auto;
+    display: flex;
+    width: 17%;
+    justify-content: center;
+    margin-top: 8em;
+    margin-bottom: 2em;
+}
+.titulo1{
+    color: #5a2d00;
+    margin-right: 4px;
+}
+
+.titulo2{
+    margin-left: 4px;
+}
 #container{
     margin: auto;
-    margin-top: 8em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,13 +41,17 @@ h2{
     margin: 20px;
     text-align: center;
 }
-.alinhar{
-    font-size: 1.1em;
+.titulos{
+    
     font-weight: bold;
+    font-size: 1.2em;
+}
+.alinhar{
     margin: auto;
     width: 70%;
 }
 #cadastro{
+    
     display: grid;
     background: #f8c28c;
     width: 21em;
@@ -47,6 +71,9 @@ input[type="number"]::-webkit-inner-spin-button {
   outline: 0;
 }
 #disheName, #dishePrice{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #5a2d00;
     height: 20px;
     width: 90%;
     background: #f3a150a4;
@@ -81,28 +108,82 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #7d4207;
     background-color: #f09234;
     border: #7d4207 3px solid;
+    text-align: center;
+    font-weight: bold;    
+}
+.btn:hover{
+    color: #7d4207;
+    background-color: #f09234;
+    border: #7d4207 1px solid;
+    text-align: center;
+    font-weight: bold;    
 }
 
 .semPromocao, .comPromocao{
+    border-radius: 10px;
     text-align: center;
+    align-items: center;
     margin-top: 8.7px;
-    min-height: 50px;
-    min-width: 75%;
+    min-height: 53px;
+    min-width: 80%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: red;
+    border: #b16f2e solid;
+    background: #dd8f41;
+}
+.comPromocao{
+    border: #3d8fb3 solid;
+    background-color: #4eb3de;
+    color: #1f6481;
+}
+.btnPromo{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: #4eb3de;
+    border-radius: 50%;
+    margin-left: 1em;
+    margin-right: 1em;
+    background: #1f6481;
+}
+.btnPromo:hover{
+    color: #1f6481;
+    background-color: #4eb3de;
+    border: #1f6481 1px solid;
+    text-align: center;
+    font-weight: bold;    
+}
+.nome{
+    margin: 10px;
+}
+.preco{
+    margin: 10px;
 }
 .fonte{
-    flex-direction: column;
-    color: #7d4207;
+    font-size: 1.2em;
 }
 .btn{
+    cursor: pointer;
     height: 20px;
+    width: 20px;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: #dd8f41;
+    border-radius: 50%;
+    margin-left: 1em;
+    margin-right: 1em;
+    background: #7d4207;
 }
+
 .imagem{
     width: 50px;
     height: 50px;
+    margin: 5px;
 }
 
 .promo{
@@ -111,6 +192,8 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 10px; 
 }
 #sim, #nao{
+    font-weight: bolder;
+    font-size: 200px;
     margin-right: 7px;   
 }
 input[type="radio"]{
